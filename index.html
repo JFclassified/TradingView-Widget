@@ -1,29 +1,33 @@
-<html>
-  <head>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://code.jquery.com/jquery-git1.min.js"></script>
-     <script>
-      $(document).on('change','.fx',function(){
-       //var widget = changeFX(this.value);
-        document.getElementById('content').src = "chart.html?value="+this.value;
-        document.getElementById('content').style.display = "block";
-       });
-</script>
-<style>
-  iframe{
-    height:400px;
-    width:600px;
-    display:none;
-  }
-</style> 
-  </head>
-  <body>
-   <select name="fx" class="fx">
-              <option value="EURUSD">EURUSD</option>
-              <option value="EURJPY">EURJPY</option>
-</select>
-<iframe src="chart.html" id="content" >
-
-</iframe>
-  </body>
-</html>
+<!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+  <div class="tradingview-widget-container__widget"></div>
+  <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/markets/" rel="noopener" target="_blank"><span class="blue-text">Markets</span></a> by TradingView</div>
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+  {
+  "symbols": [
+    {
+      "proName": "FOREXCOM:SPXUSD",
+      "title": "S&P 500"
+    },
+    {
+      "proName": "FX_IDC:EURUSD",
+      "title": "EUR/USD"
+    },
+    {
+      "proName": "BITSTAMP:BTCUSD",
+      "title": "Bitcoin"
+    },
+    {
+      "proName": "BITSTAMP:ETHUSD",
+      "title": "Ethereum"
+    }
+  ],
+  "showSymbolLogo": true,
+  "colorTheme": "light",
+  "isTransparent": true,
+  "displayMode": "adaptive",
+  "locale": "en"
+}
+  </script>
+</div>
+<!-- TradingView Widget END -->
